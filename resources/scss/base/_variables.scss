@@ -1,0 +1,14 @@
+// Qui sovrascrivo le variabili di Bootstrap con i colori e i font del brand.
+// Le ho messe prima di importare Bootstrap, così i miei valori vincono
+// su quelli di default e si applicano automaticamente a tutti i componenti.
+
+$primary:    #E8472A;
+$body-bg:    #F7F3EC;
+$body-color: #1C1A17;
+$input-bg:   #fff;
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-decoration: none;
+
+$font-family-sans-serif: 'Inter', Roboto, sans-serif;
+$headings-font-family:   'Fraunces', serif;

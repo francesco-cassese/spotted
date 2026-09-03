@@ -1,0 +1,40 @@
+.btn-base{
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.btn-login{
+    border: none;
+    background-color: $primary;
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-login-submit{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: $primary;
+    color: white;
+}
+
+.btn-login-submit:hover{
+    background-color: #c93c22;
+}
+
+.btn-login:hover{
+    background-color: #c93c22;
+}
+
+.btn-register{
+    border: 1px solid;
+}
+
+.btn-register:hover{
+    background-color: $primary;
+    color: white;
+}

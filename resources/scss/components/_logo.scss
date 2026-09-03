@@ -1,0 +1,27 @@
+.logo-container{
+    width: 150px;
+    margin: 10px;
+}
+
+.logo-image{
+    display: block;
+    object-fit: contain;
+    width: 100%;
+}
+
+.logo-xxl .logo-container{
+    width: 500px;
+
+}
+
+.badge-backoffice{
+    margin-left: 8px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background-color: #E8E3D8;
+    color: $body-color;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
