@@ -8,7 +8,7 @@
         <p>Una guida curata alle attività commerciali indipendenti e alle botteghe artigiane del territorio.</p>
     </div>
     <div class="welcome-actions d-flex">
-        <a class="btn-base btn-login" href="{{ route('login') }}">{{ __('Login') }}</a>
-        <a class="btn-base btn-register" href="{{ route('register') }}">{{ __('Register') }}</a>
+        <a class="btn-base btn-login" href="{{ route('login') }}">{{ __('Accedi') }}</a>
+        <a class="btn-base btn-register" href="{{ route('register') }}">{{ __('Registrati') }}</a>
     </div>
 @endsection

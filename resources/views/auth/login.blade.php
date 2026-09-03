@@ -60,7 +60,7 @@
 
                             <div class="mb-0">
                                 <button type="submit" class="btn-base btn-login-submit">
-                                    {{ __('Login') }}
+                                    {{ __('Accedi') }}
                                 </button>
                             </div>
                         </form>
