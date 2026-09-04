@@ -2,3 +2,7 @@
     border-color: rgba($primary, .5);
     box-shadow: 0 0 0 .15rem rgba($primary, .15);
 }
+
+.form-check-input:focus{
+    box-shadow: none;
+}
