@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Strength extends Model
+class DistinctiveTrait extends Model
 {
     protected $fillable = ['name'];
 

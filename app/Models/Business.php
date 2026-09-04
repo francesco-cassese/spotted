@@ -22,9 +22,9 @@ class Business extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function strengths()
+    public function distinctiveTraits()
     {
 
-        return $this->belongsToMany(Strength::class);
+        return $this->belongsToMany(DistinctiveTrait::class);
     }
 }

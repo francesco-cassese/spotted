@@ -2,18 +2,18 @@
 
 namespace Database\Seeders;
 
-use App\Models\Strength;
+use App\Models\DistinctiveTrait;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class StrengthSeeder extends Seeder
+class DistinctiveTraitSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $strengths = [
+        $distinctiveTraits = [
             "Fatto a mano",
             "Tramandato da generazioni",
             "Su misura",
@@ -21,11 +21,11 @@ class StrengthSeeder extends Seeder
             "Solo su prenotazione"
         ];
 
-        foreach ($strengths as $strength) {
+        foreach ($distinctiveTraits as $distinctiveTrait) {
 
-            $newstrength = new Strength();
-            $newstrength->name = $strength;
-            $newstrength->save();
+            $newDistinctiveTrait = new DistinctiveTrait();
+            $newDistinctiveTrait->name = $distinctiveTrait;
+            $newDistinctiveTrait->save();
         }
     }
 }

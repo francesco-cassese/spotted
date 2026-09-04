@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('strengths', function (Blueprint $table) {
+        Schema::create('business_distinctive_trait', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
+            $table->foreignId('business_id')->constrained()->onDelete('cascade');
+            $table->foreignId('distinctive_trait_id')->constrained()->onDelete('cascade');
             $table->timestamps();
+
+            $table->unique(['business_id', 'distinctive_trait_id'], 'business_distinctive_trait_unique');
         });
     }
 
@@ -23,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('strengths');
+        Schema::dropIfExists('business_distinctive_trait');
     }
 };

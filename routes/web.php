@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Admin\BusinessController;
 use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\StrengthController;
+use App\Http\Controllers\Admin\DistinctiveTraitController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,7 +21,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('categories', CategoryController::class);
     Route::resource('businesses', BusinessController::class);
-    Route::resource('strengths', StrengthController::class);
+    Route::resource('distinctive-traits', DistinctiveTraitController::class);
 });
 
 require __DIR__ . '/auth.php';
