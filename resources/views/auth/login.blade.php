@@ -1,14 +1,12 @@
 @extends('layouts.guest')
 
 @section('content')
-    <div class="container mt-4">
-        <div class="row justify-content-center">
-            <div class="col-md-4 px-4">
-                <div class="auth-card">
+    <div class="col-md-4 px-4">
+        <div class="auth-card">
                     <x-logo />
-                    <div class="auth-card-header">{{ __('Bentornato') }}</div>
+                    <div class="auth-card-header fs-4">{{ __('Bentornato') }}</div>
 
-                    <div class="auth-card-subtitle">
+                    <div class="auth-card-subtitle fs-6">
                         <p>Accedi al backoffice editoriale di Spotted</p>
                     </div>
 
@@ -65,8 +63,6 @@
                             </div>
                         </form>
                     </div>
-                </div>
-            </div>
         </div>
     </div>
 @endsection

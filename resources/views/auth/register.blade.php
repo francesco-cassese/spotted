@@ -1,14 +1,12 @@
 @extends('layouts.guest')
 
 @section('content')
-    <div class="container mt-4">
-        <div class="row justify-content-center">
-            <div class="col-md-4 px-4">
-                <div class="auth-card">
+    <div class="col-md-4 px-4">
+        <div class="auth-card">
                     <x-logo />
-                    <div class="auth-card-header">{{ __('Crea il tuo profilo') }}</div>
+                    <div class="auth-card-header fs-4">{{ __('Crea il tuo profilo') }}</div>
 
-                    <div class="auth-card-subtitle">
+                    <div class="auth-card-subtitle fs-6">
                         <p>Unisciti ai network di scout e artigiani indipendenti</p>
                     </div>
 
@@ -71,8 +69,6 @@
                             </div>
                         </form>
                     </div>
-                </div>
-            </div>
         </div>
     </div>
 @endsection

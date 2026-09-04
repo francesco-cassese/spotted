@@ -24,7 +24,11 @@
     <x-header />
 
     <div class="auth-page d-flex align-items-center py-4">
-        @yield('content')
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                @yield('content')
+            </div>
+        </div>
     </div>
 
     <x-footer />

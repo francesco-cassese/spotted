@@ -1,12 +1,10 @@
 @extends('layouts.guest')
 
 @section('content')
-<div class="container mt-4">
-    <div class="row justify-content-center">
-        <div class="col-md-4 px-4">
-            <div class="auth-card">
+<div class="col-md-4 px-4">
+    <div class="auth-card">
                 <x-logo />
-                <div class="auth-card-header">{{ __('Confirm Password') }}</div>
+                <div class="auth-card-header fs-4">{{ __('Confirm Password') }}</div>
 
                 <div class="auth-card-body">
                     {{ __('Please confirm your password before continuing.') }}
@@ -39,7 +37,5 @@
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
 </div>
 @endsection
