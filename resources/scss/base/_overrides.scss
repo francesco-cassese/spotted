@@ -3,6 +3,13 @@
     box-shadow: 0 0 0 .15rem rgba($primary, .15);
 }
 
+// Bootstrap 5.3 fa ereditare alle celle della tabella lo sfondo globale
+// ($body-bg, il crema del brand) tramite --bs-table-bg. Lo azzeriamo così
+// le tabelle mostrano lo sfondo bianco della card che le contiene.
+.table{
+    --bs-table-bg: transparent;
+}
+
 .form-check-input:focus{
     box-shadow: none;
 }

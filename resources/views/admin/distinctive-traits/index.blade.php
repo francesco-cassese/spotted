@@ -17,13 +17,13 @@
                     <div class="alert alert-danger">{{ session('error') }}</div>
                 @endif
 
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <table class="table table-light table-hover mb-0">
-                            <thead>
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="table-light border-bottom">
                                 <tr>
-                                    <th class="text-uppercase text-secondary small">Nome</th>
-                                    <th class="text-uppercase text-secondary small text-end">Azioni</th>
+                                    <th class="text-uppercase text-secondary small fw-semibold">Nome</th>
+                                    <th class="text-uppercase text-secondary small fw-semibold text-end">Azioni</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -47,7 +47,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="2" class="text-center text-muted py-4">Nessun tratto distintivo
+                                        <td colspan="2" class="text-center text-muted py-5">Nessun tratto distintivo
                                             salvato</td>
                                     </tr>
                                 @endforelse
