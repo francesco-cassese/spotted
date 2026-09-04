@@ -33,7 +33,11 @@
                             <a class="nav-link" href="{{ route('categories.index') }}">{{ __('Categorie') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('distinctive-traits.index') }}">{{ __('Tratti distintivi') }}</a>
+                            <a class="nav-link"
+                                href="{{ route('distinctive-traits.index') }}">{{ __('Tratti distintivi') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('businesses.index') }}">{{ __('Negozi') }}</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
