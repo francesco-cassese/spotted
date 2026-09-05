@@ -8,7 +8,7 @@
             <div class="col-12">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h1 class="fs-3 mb-0">Tratti distintivi</h1>
-                    <a href="{{ route('distinctive-traits.create') }}" class="btn-form-base btn-login">
+                    <a href="{{ route('distinctive-traits.create') }}" class="btn-form-base btn-fill">
                         <i class="bi bi-plus-lg"></i> Nuovo tratto distintivo
                     </a>
                 </div>

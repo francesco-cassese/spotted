@@ -1,3 +1,4 @@
+// Layout 
 .btn-base{
     display: inline-block;
     width: 120px;
@@ -7,42 +8,36 @@
     font-weight: bold;
 }
 
-.btn-login{
-    border: none;
-    background-color: $primary;
-    color: white;
-    margin-right: 10px;
-}
-
-.btn-login-submit{
-    display: block;
-    width: 100%;
-    border: none;
-    background-color: $primary;
-    color: white;
-}
-
-.btn-login-submit:hover{
-    background-color: #c93c22;
-}
-
-.btn-login:hover{
-    background-color: #c93c22;
-}
-
-.btn-register{
-    border: 1px solid;
-}
-
-.btn-register:hover{
-    background-color: $primary;
-    color: white;
-}
-
 .btn-form-base{
     display: inline-block;
     text-align: center;
     padding: 6px 16px;
     border-radius: 10px;
     font-weight: bold;
+}
+
+.btn-block{
+    display: block;
+    width: 100%;
+}
+
+// Modificatori di stile 
+.btn-fill{
+    border: none;
+    background-color: $primary;
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-fill:hover{
+    background-color: #c93c22;
+}
+
+.btn-outline{
+    border: 1px solid;
+}
+
+.btn-outline:hover{
+    background-color: $primary;
+    color: white;
 }

@@ -9,8 +9,8 @@
             <p class="fs-5">Una guida curata alle attività commerciali indipendenti e alle botteghe artigiane del territorio.</p>
         </div>
         <div class="welcome-actions d-flex justify-content-center">
-            <a class="btn-base btn-login" href="{{ route('login') }}">{{ __('Accedi') }}</a>
-            <a class="btn-base btn-register" href="{{ route('register') }}">{{ __('Registrati') }}</a>
+            <a class="btn-base btn-fill" href="{{ route('login') }}">{{ __('Accedi') }}</a>
+            <a class="btn-base btn-outline" href="{{ route('register') }}">{{ __('Registrati') }}</a>
         </div>
     </div>
 @endsection

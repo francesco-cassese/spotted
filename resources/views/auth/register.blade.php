@@ -63,7 +63,7 @@
                             </div>
 
                             <div class="mb-0 mt-3">
-                                <button type="submit" class="btn-base btn-login-submit">
+                                <button type="submit" class="btn-base btn-fill btn-block">
                                     {{ __('Registrati') }}
                                 </button>
                             </div>

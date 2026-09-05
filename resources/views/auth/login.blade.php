@@ -57,7 +57,7 @@
                             </div>
 
                             <div class="mb-0">
-                                <button type="submit" class="btn-base btn-login-submit">
+                                <button type="submit" class="btn-base btn-fill btn-block">
                                     {{ __('Accedi') }}
                                 </button>
                             </div>
