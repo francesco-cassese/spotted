@@ -29,6 +29,20 @@ L'obiettivo è permettere a un amministratore di:
 - CRUD completo su **Category**
 - CRUD completo su **DistinctiveTrait** (tratto distintivo)
 
+## Screenshot
+
+| Dashboard | Elenco negozi |
+|---|---|
+| ![Dashboard](docs/screenshots/dashboard.png) | ![Elenco negozi](docs/screenshots/businesses-index.png) |
+
+| Nuovo negozio | Categorie |
+|---|---|
+| ![Nuovo negozio](docs/screenshots/business-create.png) | ![Categorie](docs/screenshots/categories-index.png) |
+
+| Tratti distintivi |
+|---|
+| ![Tratti distintivi](docs/screenshots/distinctive-traits-index.png) |
+
 ## Modelli e relazioni
 
 - `Business` **belongsTo** `Category` (relazione 1-N: ogni attività appartiene a una categoria)
