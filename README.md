@@ -2,7 +2,7 @@
 
 **Spotted** è un'applicazione web pensata per dare visibilità alle attività commerciali locali che hanno potenziale ma sono ancora poco conosciute — piccoli negozi, locali e artigiani che meritano di essere "scoperti" (spotted, appunto) e valorizzati, evidenziandone la storia, la categoria e le caratteristiche che li rendono unici.
 
-Il progetto nasce come esame finale del corso Full Stack ed è composto da un backoffice Laravel per la gestione dei dati (attualmente sviluppato), a cui in futuro si affiancherà un sito pubblico in React consultabile dai visitatori.
+Il progetto nasce come esame finale del corso Full Stack ed è composto da un backoffice Laravel per la gestione dei dati (attualmente sviluppato) e da una API REST (in corso di sviluppo) che espone gli stessi dati in sola lettura, pensata per il futuro sito pubblico in React consultabile dai visitatori.
 
 ## Scopo del progetto
 
@@ -28,6 +28,7 @@ L'obiettivo è permettere a un amministratore di:
 - CRUD completo su **Business** (attività), con upload dell'immagine di copertina
 - CRUD completo su **Category**
 - CRUD completo su **DistinctiveTrait** (tratto distintivo)
+- API REST pubblica e in sola lettura per il futuro sito guest React: elenco business, dettaglio di un business (con categoria e tratti distintivi), elenco categorie
 
 ## Screenshot
 
@@ -116,6 +117,8 @@ php artisan test
 
 - `app/Models` — modelli Eloquent (`Business`, `Category`, `DistinctiveTrait`)
 - `app/Http/Controllers/Admin` — controller CRUD del backoffice
+- `app/Http/Controllers/Api` — controller di sola lettura per l'API REST
+- `routes/api.php` — rotte dell'API (prefisso `/api`)
 - `database/migrations` — schema del database
 - `database/seeders` — dati di esempio
 - `resources/views` — viste Blade
