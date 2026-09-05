@@ -3,6 +3,9 @@
 @section('title', 'Categorie')
 
 @section('content')
+    <a href="{{ route('dashboard') }}" class="btn btn-link ps-0 text-decoration-none">
+        <i class="bi bi-arrow-left"></i> Torna alla Dashboard
+    </a>
     <div class="container">
         <div class="row">
             <div class="col-12">

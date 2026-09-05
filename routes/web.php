@@ -4,6 +4,9 @@ use App\Http\Controllers\Admin\BusinessController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DistinctiveTraitController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Business;
+use App\Models\Category;
+use App\Models\DistinctiveTrait;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,7 +14,11 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $businessesCount = Business::count();
+    $categoriesCount = Category::count();
+    $distinctiveTraitsCount = DistinctiveTrait::count();
+
+    return view('dashboard', compact('businessesCount', 'categoriesCount', 'distinctiveTraitsCount'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
