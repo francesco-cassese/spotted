@@ -17,10 +17,9 @@ class BusinessController extends Controller
      */
     public function index()
     {
-        $businesses = Business::all();
-        $category = Category::all();
+        $businesses = Business::with('category')->get();
 
-        return view('admin.businesses.index', compact('businesses', 'category'));
+        return view('admin.businesses.index', compact('businesses'));
     }
 
     /**
@@ -46,7 +45,7 @@ class BusinessController extends Controller
             'contact' => 'nullable|string|max:255',
             'cover_image' => 'nullable|image|max:2048',
             'category_id' => 'required|exists:categories,id',
-            'distinctive_traits' => 'nullable|array',
+            'distinctive_traits' => 'required|array',
             'distinctive_traits.*' => 'exists:distinctive_traits,id',
         ]);
 
@@ -100,11 +99,16 @@ class BusinessController extends Controller
             'contact' => 'nullable|string|max:255',
             'cover_image' => 'nullable|image|max:2048',
             'category_id' => 'required|exists:categories,id',
-            'distinctive_traits' => 'nullable|array',
+            'distinctive_traits' => 'required|array',
             'distinctive_traits.*' => 'exists:distinctive_traits,id',
         ]);
 
         if (array_key_exists('cover_image', $data) && $data['cover_image']) {
+            // Se carico una nuova immagine cancello prima quella vecchia, altrimenti resta orfana su disco
+            if ($business->cover_image) {
+                Storage::delete($business->cover_image);
+            }
+
             $data['cover_image'] = Storage::putFile('businesses', $data['cover_image']);
         }
 
@@ -117,9 +121,7 @@ class BusinessController extends Controller
         $business->category_id = $data['category_id'];
         $business->save();
 
-        if ($request->has('distinctive_traits')) {
-            $business->distinctiveTraits()->sync($data['distinctive_traits']);
-        }
+        $business->distinctiveTraits()->sync($data['distinctive_traits']);
 
         return redirect()->route('businesses.index');
     }
