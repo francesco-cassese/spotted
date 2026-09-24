@@ -20,7 +20,7 @@ class BusinessesSeeder extends Seeder
         $businesses = [
             [
                 'name' => 'Panificio Il Grano Antico',
-                'story' => 'Panificio a conduzione familiare che sforna ogni mattina pane e prodotti da forno seguendo una lievitazione lenta e naturale, come si faceva una volta.',
+                'story' => "Il lievito madre di Giulia Ferri ha più di sessant'anni: lo ha ereditato dalla nonna e non l'ha mai lasciato spegnere. Alle quattro del mattino il forno è già acceso, e il pane esce lento, dopo una notte intera di lievitazione. Per questo il pane resta fragrante per giorni.",
                 'address' => 'Via del Forno 3, Bologna',
                 'contact' => '051 123 4567',
                 'category' => 'Cibo e ristorazione',
@@ -29,7 +29,7 @@ class BusinessesSeeder extends Seeder
             ],
             [
                 'name' => 'Trattoria Da Elvira',
-                'story' => 'Trattoria di quartiere che propone piatti della tradizione locale, cucinati seguendo le ricette tramandate da Elvira alla sua famiglia.',
+                'story' => "Elvira cucinava per i vicini dalla cucina di casa, in vicolo delle Rose, finché le tavolate sono diventate una trattoria. Oggi i nipoti servono ancora il ragù della domenica con la sua ricetta, scritta a penna su un quaderno che nessuno ha il permesso di correggere. I tavoli sono pochi e la pasta si tira a mano ogni mattina, per questo si viene solo su prenotazione. Chi si siede a tavola mangia come a casa di Elvira, con gli stessi sapori di sempre.",
                 'address' => 'Vicolo delle Rose 5, Napoli',
                 'contact' => '081 234 5678',
                 'category' => 'Cibo e ristorazione',
@@ -38,7 +38,7 @@ class BusinessesSeeder extends Seeder
             ],
             [
                 'name' => 'Sartoria Marchetti',
-                'story' => 'Sartoria artigianale specializzata in abiti da uomo su misura, realizzati a mano capo per capo su richiesta del cliente.',
+                'story' => "Aldo Marchetti ha imparato a tagliare la stoffa a quattordici anni, come garzone in una bottega di Torino. Oggi ogni abito nasce da tre prove e da un modello disegnato sul cliente, senza scorciatoie: il gessetto è ancora quello di quarant'anni fa. Un abito Marchetti veste bene perché è fatto sul tuo corpo e non su una taglia.",
                 'address' => 'Corso Vittorio Emanuele 45, Torino',
                 'contact' => '011 345 6789',
                 'category' => 'Artigianato',
@@ -47,7 +47,7 @@ class BusinessesSeeder extends Seeder
             ],
             [
                 'name' => 'Falegnameria Conti',
-                'story' => 'Falegnameria di famiglia, giunta alla terza generazione, che realizza mobili su misura in legno massello con tecniche tradizionali.',
+                'story' => "Il banco da lavoro è quello di nonno Ettore, con i segni di tre generazioni di pialle. Marco Conti sceglie le tavole una a una, le lascia stagionare per anni e costruisce mobili che, dice, dureranno più di lui. Ognuno è disegnato insieme a chi lo ha ordinato. Per questo entra nella stanza per cui è nato e ci resta per generazioni.",
                 'address' => "Via dell'Artigianato 8, Bergamo",
                 'contact' => '035 456 7890',
                 'category' => 'Artigianato',
@@ -56,7 +56,7 @@ class BusinessesSeeder extends Seeder
             ],
             [
                 'name' => 'Centro Estetico Bellavita',
-                'story' => 'Centro estetico che offre trattamenti di bellezza e benessere personalizzati, con prodotti attenti alla sostenibilità.',
+                'story' => "Chiara ha aperto Bellavita dopo dieci anni nelle grandi catene, per lavorare con calma: una cliente alla volta, senza fretta. Le cabine sono tre, i prodotti sono a base di ingredienti naturali e i barattoli vuoti si riportano indietro per essere riempiti di nuovo. Si viene solo su appuntamento. Chi entra ha la cabina e il tempo solo per sé, e sa cosa c'è nei prodotti che usa.",
                 'address' => 'Via Roma 12, Milano',
                 'contact' => '02 567 8901',
                 'category' => 'Cura della persona',
@@ -65,7 +65,7 @@ class BusinessesSeeder extends Seeder
             ],
             [
                 'name' => 'Studio Legale Rinaldi',
-                'story' => 'Studio legale specializzato in diritto civile e del lavoro, che segue i propri assistiti con consulenze personalizzate.',
+                'story' => "L'avvocato Rinaldi ha iniziato in uno studio grande, dove non aveva mai il tempo di ascoltare. Nel 2012 ha aperto il suo in via Garibaldi, con una regola: il primo colloquio serve a capire, non a fatturare. Segue cause civili e di lavoro e riceve solo su appuntamento, per dedicare a ognuno il tempo che serve. Con lui si sa fin dal primo incontro cosa aspettarsi e quanto costerà.",
                 'address' => 'Via Garibaldi 22, Firenze',
                 'contact' => '055 678 9012',
                 'category' => 'Servizi',
