@@ -9,6 +9,7 @@ use App\Models\DistinctiveTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
 
 class BusinessController extends Controller
 {
@@ -39,7 +40,7 @@ class BusinessController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:businesses,name',
             'story' => 'nullable|string',
             'address' => 'nullable|string|max:255',
             'contact' => 'nullable|string|max:255',
@@ -93,7 +94,7 @@ class BusinessController extends Controller
     public function update(Request $request, Business $business)
     {
         $data = $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => ['required', 'string', 'max:255', Rule::unique('businesses', 'name')->ignore($business->id)],
             'story' => 'nullable|string',
             'address' => 'nullable|string|max:255',
             'contact' => 'nullable|string|max:255',
