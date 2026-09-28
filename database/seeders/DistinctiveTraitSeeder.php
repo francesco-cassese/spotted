@@ -18,7 +18,8 @@ class DistinctiveTraitSeeder extends Seeder
             "Tramandato da generazioni",
             "Su misura",
             "Sostenibile",
-            "Solo su prenotazione"
+            "Solo su prenotazione",
+            "A domicilio"
         ];
 
         foreach ($distinctiveTraits as $distinctiveTrait) {

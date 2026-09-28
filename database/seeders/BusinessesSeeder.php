@@ -72,6 +72,38 @@ class BusinessesSeeder extends Seeder
                 'traits' => ['Solo su prenotazione'],
                 'image' => 'studio-legale-rinaldi.jpg',
             ],
+            // Le ultime tre non hanno una sede: due lavorano a domicilio, una vende solo online.
+            // Le foto non ci sono ancora: se manca il file il seeder salva il negozio senza immagine
+            [
+                'name' => 'Ciclofficina Volante',
+                'story' => "Marta ripara biciclette senza avere un negozio: arriva con il furgone e gli attrezzi sotto casa tua, e la bici la sistema mentre prendi il caffè. Ha iniziato dal garage del padre, poi ha capito che a molti manca il tempo di portare la bici in officina. Per questo va lei da loro, su appuntamento.",
+                'address' => null,
+                'contact' => '347 890 1234',
+                'website' => 'https://www.example.com/ciclofficina-volante',
+                'category' => 'Servizi',
+                'traits' => ['A domicilio', 'Solo su prenotazione'],
+                'image' => 'ciclofficina-volante.jpg',
+            ],
+            [
+                'name' => 'Ceramiche Lina',
+                'story' => "Lina modella ogni tazza al tornio nel suo laboratorio di casa e la vende solo online: niente vetrina, niente magazzino. Ogni pezzo è unico e parte con un biglietto scritto a mano. Se hai in mente un colore o una misura, glielo scrivi dal sito e lei la realizza per te.",
+                'address' => null,
+                'contact' => null,
+                'website' => 'https://www.example.com/ceramiche-lina',
+                'category' => 'Artigianato',
+                'traits' => ['Fatto a mano', 'Su misura'],
+                'image' => 'ceramiche-lina.jpg',
+            ],
+            [
+                'name' => 'Giada a Domicilio',
+                'story' => "Giada fa la parrucchiera da quindici anni e da qualche tempo lavora solo a casa dei clienti, con una valigia di strumenti e prodotti naturali. Chi non può uscire, per l'età o per gli orari, la chiama e lei arriva. Si prende tutto il tempo che serve e non ha una sede da mantenere.",
+                'address' => null,
+                'contact' => '340 123 4567',
+                'website' => null,
+                'category' => 'Cura della persona',
+                'traits' => ['A domicilio', 'Sostenibile', 'Solo su prenotazione'],
+                'image' => 'giada-a-domicilio.jpg',
+            ],
         ];
 
         foreach ($businesses as $data) {
@@ -89,6 +121,7 @@ class BusinessesSeeder extends Seeder
             $newBusiness->story = $data['story'];
             $newBusiness->address = $data['address'];
             $newBusiness->contact = $data['contact'];
+            $newBusiness->website = $data['website'] ?? null;
             $newBusiness->cover_image = $coverImage;
             $newBusiness->category_id = $category->id;
             $newBusiness->save();
