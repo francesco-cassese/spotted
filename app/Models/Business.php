@@ -6,17 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Business extends Model
 {
-    protected $fillable = [
-        'name',
-        'slug',
-        'story',
-        'address',
-        'contact',
-        'website',
-        'cover_image',
-        'category_id',
-    ];
-
     public function category()
     {
 
