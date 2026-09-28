@@ -43,7 +43,7 @@ class BusinessController extends Controller
             'name' => 'required|string|max:255|unique:businesses,name',
             'story' => 'nullable|string',
             'address' => 'nullable|string|max:255',
-            'contact' => 'nullable|string|max:255',
+            'phone_number' => 'required|string|max:255',
             'website' => 'nullable|url|max:255',
             'cover_image' => 'nullable|image|max:2048',
             'category_id' => 'required|exists:categories,id',
@@ -60,7 +60,7 @@ class BusinessController extends Controller
         $newBusiness->slug = Str::slug($data['name']);
         $newBusiness->story = $data['story'];
         $newBusiness->address = $data['address'];
-        $newBusiness->contact = $data['contact'];
+        $newBusiness->phone_number = $data['phone_number'];
         $newBusiness->website = $data['website'];
         $newBusiness->cover_image = $data['cover_image'] ?? null;
         $newBusiness->category_id = $data['category_id'];
@@ -99,7 +99,7 @@ class BusinessController extends Controller
             'name' => ['required', 'string', 'max:255', Rule::unique('businesses', 'name')->ignore($business->id)],
             'story' => 'nullable|string',
             'address' => 'nullable|string|max:255',
-            'contact' => 'nullable|string|max:255',
+            'phone_number' => 'required|string|max:255',
             'website' => 'nullable|url|max:255',
             'cover_image' => 'nullable|image|max:2048',
             'category_id' => 'required|exists:categories,id',
@@ -120,7 +120,7 @@ class BusinessController extends Controller
         $business->slug = Str::slug($data['name']);
         $business->story = $data['story'];
         $business->address = $data['address'];
-        $business->contact = $data['contact'];
+        $business->phone_number = $data['phone_number'];
         $business->website = $data['website'];
         $business->cover_image = $data['cover_image'] ?? $business->cover_image;
         $business->category_id = $data['category_id'];

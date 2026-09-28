@@ -28,7 +28,7 @@
                                     <th class="text-uppercase text-secondary small fw-semibold">Nome</th>
                                     <th class="text-uppercase text-secondary small fw-semibold">Storia</th>
                                     <th class="text-uppercase text-secondary small fw-semibold">Indirizzo</th>
-                                    <th class="text-uppercase text-secondary small fw-semibold">Contatti</th>
+                                    <th class="text-uppercase text-secondary small fw-semibold">Telefono</th>
                                     <th class="text-uppercase text-secondary small fw-semibold">Sito web</th>
                                     <th class="text-uppercase text-secondary small fw-semibold">Immagine</th>
                                     <th class="text-uppercase text-secondary small fw-semibold">Categoria</th>
@@ -49,7 +49,7 @@
                                             {{ $business->address ?? '-' }}
                                         </td>
                                         <td class="align-middle">
-                                            {{ $business->contact ? 'Tel. ' . $business->contact : '-' }}
+                                            Tel. {{ $business->phone_number }}
                                         </td>
                                         <td class="align-middle">
                                             {{ $business->website ?? '-' }}

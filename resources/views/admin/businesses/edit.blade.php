@@ -48,12 +48,12 @@
                                 </div>
 
                                 <div class="col-12 col-sm-4 mb-2">
-                                    <label for="business-contact" class="form-label fw-bold fs-5">Contatti</label>
-                                    <input type="text" name="contact" id="business-contact"
-                                        class="form-control @error('contact') is-invalid @enderror"
-                                        value="{{ old('contact', $business->contact) }}">
+                                    <label for="business-phone-number" class="form-label fw-bold fs-5">Telefono</label>
+                                    <input type="text" name="phone_number" id="business-phone-number"
+                                        class="form-control @error('phone_number') is-invalid @enderror"
+                                        value="{{ old('phone_number', $business->phone_number) }}">
 
-                                    @error('contact')
+                                    @error('phone_number')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('story')->nullable();
             $table->string('address')->nullable();
-            $table->string('contact')->nullable();
+            $table->string('phone_number');
             $table->string('website')->nullable();
             $table->string('cover_image')->nullable();
             $table->foreignId('category_id')->constrained()->onDelete('restrict');
