@@ -67,9 +67,9 @@ Il progetto è l'esame finale del corso Full Stack.
 |---|---|
 | `categories` | `name`, `slug` (univoco) |
 | `distinctive_traits` | `name` (univoco) |
-| `businesses` | `name`, `slug` (univoco), `story`, `address`, `contact`, `website`, `cover_image`, `category_id` |
+| `businesses` | `name`, `slug` (univoco), `story`, `address`, `phone_number`, `website`, `cover_image`, `category_id` |
 
-Solo `name`, `slug` e `category_id` sono obbligatori: `story`, `address`, `contact`, `website` e `cover_image` sono facoltativi (`nullable`), perché ci sono attività senza sede che lavorano a domicilio o vendono solo online.
+`name`, `slug`, `phone_number` (il telefono, così ogni attività si può contattare) e `category_id` sono obbligatori. `story`, `address`, `website` e `cover_image` sono facoltativi (`nullable`), perché ci sono attività senza sede che lavorano a domicilio o vendono solo online.
 | `business_distinctive_trait` | tabella pivot: `business_id`, `distinctive_trait_id` |
 
 Relazioni Eloquent:
@@ -182,7 +182,7 @@ Le risposte hanno sempre la stessa forma:
     "slug": "panificio-il-grano-antico",
     "story": "…",
     "address": "Via del Forno 3, Bologna",
-    "contact": "051 123 4567",
+    "phone_number": "051 123 4567",
     "website": null,
     "cover_image": "businesses/panificio-il-grano-antico.jpg",
     "cover_image_url": "http://127.0.0.1:8000/storage/businesses/panificio-il-grano-antico.jpg",
