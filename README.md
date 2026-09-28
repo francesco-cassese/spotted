@@ -67,7 +67,9 @@ Il progetto è l'esame finale del corso Full Stack.
 |---|---|
 | `categories` | `name`, `slug` (univoco) |
 | `distinctive_traits` | `name` (univoco) |
-| `businesses` | `name`, `slug` (univoco), `story`, `address`, `contact`, `cover_image`, `category_id` |
+| `businesses` | `name`, `slug` (univoco), `story`, `address`, `contact`, `website`, `cover_image`, `category_id` |
+
+Solo `name`, `slug` e `category_id` sono obbligatori: `story`, `address`, `contact`, `website` e `cover_image` sono facoltativi (`nullable`), perché ci sono attività senza sede che lavorano a domicilio o vendono solo online.
 | `business_distinctive_trait` | tabella pivot: `business_id`, `distinctive_trait_id` |
 
 Relazioni Eloquent:
@@ -128,7 +130,7 @@ Regole di integrità sul database:
    php artisan migrate --seed
    ```
 
-   Il seeder crea l'utente di prova, 4 categorie, 5 tratti distintivi e 6 attività con le loro immagini.
+   Il seeder crea l'utente di prova, 4 categorie, 6 tratti distintivi e 9 attività. Le prime 6 hanno la loro immagine; le ultime 3 (`Ciclofficina Volante`, `Ceramiche Lina`, `Giada a Domicilio`) non hanno una sede e per ora nemmeno una foto: due lavorano a domicilio e una vende solo online.
 
 5. **Collegamento della cartella delle immagini**
 
@@ -181,6 +183,7 @@ Le risposte hanno sempre la stessa forma:
     "story": "…",
     "address": "Via del Forno 3, Bologna",
     "contact": "051 123 4567",
+    "website": null,
     "cover_image": "businesses/panificio-il-grano-antico.jpg",
     "cover_image_url": "http://127.0.0.1:8000/storage/businesses/panificio-il-grano-antico.jpg",
     "category": { "id": 2, "name": "Cibo e ristorazione", "slug": "cibo-e-ristorazione" },
