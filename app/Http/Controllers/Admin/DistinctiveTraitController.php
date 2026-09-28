@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\DistinctiveTrait;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class DistinctiveTraitController extends Controller
 {
@@ -33,7 +34,7 @@ class DistinctiveTraitController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:distinctive_traits,name',
         ]);
 
         $newDistinctiveTrait = new DistinctiveTrait();
@@ -65,7 +66,7 @@ class DistinctiveTraitController extends Controller
     public function update(Request $request, DistinctiveTrait $distinctiveTrait)
     {
         $data = $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => ['required', 'string', 'max:255', Rule::unique('distinctive_traits', 'name')->ignore($distinctiveTrait->id)],
         ]);
 
         $distinctiveTrait->name = $data['name'];
