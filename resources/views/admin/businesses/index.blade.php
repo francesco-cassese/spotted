@@ -29,6 +29,7 @@
                                     <th class="text-uppercase text-secondary small fw-semibold">Storia</th>
                                     <th class="text-uppercase text-secondary small fw-semibold">Indirizzo</th>
                                     <th class="text-uppercase text-secondary small fw-semibold">Contatti</th>
+                                    <th class="text-uppercase text-secondary small fw-semibold">Sito web</th>
                                     <th class="text-uppercase text-secondary small fw-semibold">Immagine</th>
                                     <th class="text-uppercase text-secondary small fw-semibold">Categoria</th>
                                     <th class="text-uppercase text-secondary small fw-semibold">Azioni</th>
@@ -49,6 +50,9 @@
                                         </td>
                                         <td class="align-middle">
                                             {{ $business->contact ? 'Tel. ' . $business->contact : '-' }}
+                                        </td>
+                                        <td class="align-middle">
+                                            {{ $business->website ?? '-' }}
                                         </td>
                                         <td class="align-middle">
                                             {{ $business->cover_image ?? 'nessun immagine aggiunta' }}
@@ -73,7 +77,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="7" class="text-center text-secondary py-5">
+                                        <td colspan="8" class="text-center text-secondary py-5">
                                             Nessun negozio presente.
                                         </td>
                                     </tr>

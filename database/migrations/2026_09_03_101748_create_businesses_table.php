@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('story')->nullable();
             $table->string('address')->nullable();
             $table->string('contact')->nullable();
+            $table->string('website')->nullable();
             $table->string('cover_image')->nullable();
             $table->foreignId('category_id')->constrained()->onDelete('restrict');
             $table->timestamps();

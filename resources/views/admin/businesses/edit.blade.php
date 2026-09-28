@@ -61,6 +61,20 @@
                                 </div>
                             </div>
 
+                            <div class="mb-2">
+                                <label for="business-website" class="form-label fw-bold fs-5">Sito web</label>
+                                <input type="text" name="website" id="business-website"
+                                    class="form-control @error('website') is-invalid @enderror"
+                                    placeholder="Es. https://www.esempio.it"
+                                    value="{{ old('website', $business->website) }}">
+
+                                @error('website')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+
                             <div class="row">
                                 <div class="col-12 col-sm-6 mb-2">
                                     <label for="business-category" class="form-label fw-bold fs-5">Categoria</label>

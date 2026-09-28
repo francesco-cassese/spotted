@@ -12,6 +12,7 @@ class Business extends Model
         'story',
         'address',
         'contact',
+        'website',
         'cover_image',
         'category_id',
     ];

@@ -44,6 +44,7 @@ class BusinessController extends Controller
             'story' => 'nullable|string',
             'address' => 'nullable|string|max:255',
             'contact' => 'nullable|string|max:255',
+            'website' => 'nullable|url|max:255',
             'cover_image' => 'nullable|image|max:2048',
             'category_id' => 'required|exists:categories,id',
             'distinctive_traits' => 'required|array',
@@ -60,6 +61,7 @@ class BusinessController extends Controller
         $newBusiness->story = $data['story'];
         $newBusiness->address = $data['address'];
         $newBusiness->contact = $data['contact'];
+        $newBusiness->website = $data['website'];
         $newBusiness->cover_image = $data['cover_image'] ?? null;
         $newBusiness->category_id = $data['category_id'];
         $newBusiness->save();
@@ -98,6 +100,7 @@ class BusinessController extends Controller
             'story' => 'nullable|string',
             'address' => 'nullable|string|max:255',
             'contact' => 'nullable|string|max:255',
+            'website' => 'nullable|url|max:255',
             'cover_image' => 'nullable|image|max:2048',
             'category_id' => 'required|exists:categories,id',
             'distinctive_traits' => 'required|array',
@@ -118,6 +121,7 @@ class BusinessController extends Controller
         $business->story = $data['story'];
         $business->address = $data['address'];
         $business->contact = $data['contact'];
+        $business->website = $data['website'];
         $business->cover_image = $data['cover_image'] ?? $business->cover_image;
         $business->category_id = $data['category_id'];
         $business->save();
