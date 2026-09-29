@@ -20,6 +20,10 @@
                     <div class="alert alert-danger">{{ session('error') }}</div>
                 @endif
 
+                @if (session('success'))
+                    <div class="alert alert-success">{{ session('success') }}</div>
+                @endif
+
                 <div class="card border-0 shadow-sm rounded-4 overflow-hidden bg-white">
                     <div class="table-responsive">
                         <table class="table table-hover align-middle mb-0">
