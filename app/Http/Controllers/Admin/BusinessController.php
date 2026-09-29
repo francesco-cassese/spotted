@@ -68,7 +68,7 @@ class BusinessController extends Controller
 
         $newBusiness->distinctiveTraits()->attach($data['distinctive_traits']);
 
-        return redirect()->route('businesses.index');
+        return redirect()->route('businesses.index')->with('success', "Negozio: $newBusiness->name aggiunto con successo.");
     }
 
     /**
@@ -128,7 +128,7 @@ class BusinessController extends Controller
 
         $business->distinctiveTraits()->sync($data['distinctive_traits']);
 
-        return redirect()->route('businesses.index');
+        return redirect()->route('businesses.index')->with('success', "Negozio: $business->name modificato con successo.");
     }
 
     /**
@@ -142,6 +142,6 @@ class BusinessController extends Controller
 
         $business->delete();
 
-        return redirect()->route('businesses.index');
+        return redirect()->route('businesses.index')->with('success', "Negozio: $business->name eliminato con successo.");
     }
 }

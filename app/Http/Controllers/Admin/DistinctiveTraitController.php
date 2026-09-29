@@ -41,7 +41,7 @@ class DistinctiveTraitController extends Controller
         $newDistinctiveTrait->name = $data['name'];
         $newDistinctiveTrait->save();
 
-        return redirect()->route('distinctive-traits.index');
+        return redirect()->route('distinctive-traits.index')->with('success', "Tratto distintivo: $newDistinctiveTrait->name aggiunto con successo.");
     }
 
     /**
@@ -72,7 +72,7 @@ class DistinctiveTraitController extends Controller
         $distinctiveTrait->name = $data['name'];
         $distinctiveTrait->save();
 
-        return redirect()->route('distinctive-traits.index');
+        return redirect()->route('distinctive-traits.index')->with('success', "Tratto distintivo: $distinctiveTrait->name modificato con successo.");
     }
 
     /**
@@ -82,6 +82,6 @@ class DistinctiveTraitController extends Controller
     {
         $distinctiveTrait->delete();
 
-        return redirect()->route('distinctive-traits.index');
+        return redirect()->route('distinctive-traits.index')->with('success', "Tratto distintivo: $distinctiveTrait->name eliminato con successo.");
     }
 }
