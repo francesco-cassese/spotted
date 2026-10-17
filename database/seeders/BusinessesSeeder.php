@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Business;
 use App\Models\Category;
 use App\Models\DistinctiveTrait;
+use Exception;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
@@ -108,11 +109,17 @@ class BusinessesSeeder extends Seeder
 
         foreach ($businesses as $data) {
             $category = Category::where('name', $data['category'])->first();
+            if (! $category) {
+                throw new Exception("Categoria non trovata: {$data['category']}");
+            }
 
             $coverImage = null;
             $sourcePath = public_path('images/seed-businesses/' . $data['image']);
             if (file_exists($sourcePath)) {
-                $coverImage = Storage::putFileAs('businesses', $sourcePath, $data['image']);
+                $savedPath = Storage::putFileAs('businesses', $sourcePath, $data['image']);
+                if ($savedPath !== false) {
+                    $coverImage = $savedPath;
+                }
             }
 
             $newBusiness = new Business();
