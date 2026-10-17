@@ -9,10 +9,10 @@
             <div class="col d-flex">
                 <div class="card bg-light flex-fill text-center p-4 shadow-sm">
                     <i class="bi bi-shop fs-1 text-danger"></i>
-                    <h2>{{ __('Negozi') }}</h2>
+                    <h2>{{ __('Attività') }}</h2>
                     <span class="fs-4">{{ $businessesCount }}</span>
                     <a href="{{ route('businesses.index') }}" class="btn-form-base btn-fill mx-auto my-2">Visualizza
-                        Negozi</a>
+                        Attività</a>
                 </div>
             </div>
             <div class="col d-flex">

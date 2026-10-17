@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Negozi')
+@section('title', 'Attività')
 
 @section('content')
     <a href="{{ route('dashboard') }}" class="btn btn-link ps-0 text-decoration-none">
@@ -10,9 +10,9 @@
         <div class="row">
             <div class="col-12">
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h1 class="fs-3 mb-0">Negozi</h1>
+                    <h1 class="fs-3 mb-0">Attività</h1>
                     <a href="{{ route('businesses.create') }}" class="btn-form-base btn-fill">
-                        <i class="bi bi-plus-lg"></i> Nuovo Negozio
+                        <i class="bi bi-plus-lg"></i> Nuova Attività
                     </a>
                 </div>
 
@@ -82,7 +82,7 @@
                                 @empty
                                     <tr>
                                         <td colspan="8" class="text-center text-secondary py-5">
-                                            Nessun negozio presente.
+                                            Nessuna attività presente.
                                         </td>
                                     </tr>
                                 @endforelse
@@ -99,7 +99,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Elimina negozio</h5>
+                        <h5 class="modal-title">Elimina Attività</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
                     </div>
                     <div class="modal-body">
