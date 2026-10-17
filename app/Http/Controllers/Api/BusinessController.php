@@ -24,7 +24,7 @@ class BusinessController extends Controller
         ]);
     }
 
-    public function show($slug)
+    public function show(string $slug)
     {
         $business = Business::with('category', 'distinctiveTraits')->where('slug', $slug)->firstOrFail();
 
