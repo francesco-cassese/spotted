@@ -14,7 +14,7 @@ class BusinessController extends Controller
         $businesses = Business::with('category')->get()->map(function ($business) {
             $business->cover_image_url = $business->cover_image
                 ? Storage::url($business->cover_image)
-                : null;
+                : asset('images/placeholder.jpg');
             return $business;
         });
 
@@ -30,7 +30,7 @@ class BusinessController extends Controller
 
         $business->cover_image_url = $business->cover_image
             ? Storage::url($business->cover_image)
-            : null;
+            : asset('images/placeholder.jpg');
 
         return response()->json([
             'success' => true,
