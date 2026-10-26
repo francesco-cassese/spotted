@@ -23,6 +23,8 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
+                // Usa la nuova API di Sass per evitare il warning legacy-js-api.
+                api: 'modern-compiler',
                 // Silenzia i warning di deprecazione di Sass generati da @import
                 // (nostro e di Bootstrap) e dalle funzioni legacy usate da Bootstrap 5.3.
                 quietDeps: true,

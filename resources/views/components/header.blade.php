@@ -37,7 +37,7 @@
                                 href="{{ route('distinctive-traits.index') }}">{{ __('Tratti distintivi') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('businesses.index') }}">{{ __('Negozi') }}</a>
+                            <a class="nav-link" href="{{ route('businesses.index') }}">{{ __('Attività') }}</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
