@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-light">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="{{ url('dashboard') }}">
+            <a class="navbar-brand d-flex align-items-center" href="{{ auth()->check() ? url('dashboard') : url('/') }}">
                 <x-logo />
                 <span class="badge-backoffice">Backoffice</span>
             </a>
