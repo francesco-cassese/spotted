@@ -1,8 +1,8 @@
-# Spotted — Backend
+# Uncovered — Backend
 
-**Spotted** è una directory di piccole attività locali (negozi, artigiani, locali, servizi) pensata per dare visibilità a chi ha del potenziale ma è ancora poco conosciuto. Ogni attività viene raccontata con la sua storia, la sua categoria e i tratti distintivi che la rendono speciale.
+**Uncovered** è una directory di piccole attività locali (negozi, artigiani, locali, servizi) pensata per dare visibilità a chi ha del potenziale ma è ancora poco conosciuto. Ogni attività viene raccontata con la sua storia, la sua categoria e i tratti distintivi che la rendono speciale.
 
-Questo repository contiene il **backend**: un backoffice in Laravel per gestire i contenuti e un'API REST pubblica in sola lettura che alimenta il sito React ([`spotted-frontend`](https://github.com/francesco-cassese/spotted-frontend)).
+Questo repository contiene il **backend**: un backoffice in Laravel per gestire i contenuti e un'API REST pubblica in sola lettura che alimenta il sito React ([`uncovered-frontend`](https://github.com/francesco-cassese/uncovered-frontend)).
 
 Il progetto è l'esame finale del corso Full Stack.
 
@@ -10,7 +10,7 @@ Il progetto è l'esame finale del corso Full Stack.
 
 ```
 ┌───────────────────────┐   richieste HTTP (JSON)   ┌──────────────────────────┐
-│   spotted-frontend    │ ────────────────────────► │   spotted (questo repo)  │
+│   uncovered-frontend  │ ────────────────────────► │   uncovered-backend      │
 │   React + Vite        │                           │   Laravel 11 + MySQL     │
 │   localhost:5173      │                           │   127.0.0.1:8000         │
 └───────────────────────┘                           │   ├─ Backoffice (Blade)  │
@@ -106,7 +106,7 @@ Regole di integrità sul database:
    php artisan key:generate
    ```
 
-3. **Configurazione del `.env`.** Crea un database MySQL vuoto (per esempio `spotted`) e imposta questi valori. Il file di esempio usa SQLite, quindi vanno modificati:
+3. **Configurazione del `.env`.** Crea un database MySQL vuoto (per esempio `uncovered`) e imposta questi valori. Il file di esempio usa SQLite, quindi vanno modificati:
 
    ```dotenv
    APP_URL=http://127.0.0.1:8000
@@ -114,7 +114,7 @@ Regole di integrità sul database:
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
    DB_PORT=3306
-   DB_DATABASE=spotted
+   DB_DATABASE=uncovered
    DB_USERNAME=root
    DB_PASSWORD=
 
@@ -159,7 +159,7 @@ Il backoffice è su `http://127.0.0.1:8000/login`. Credenziali di prova create d
 |---|---|
 | `test@example.com` | `password` |
 
-Per vedere il sito pubblico avvia anche il [frontend React](https://github.com/francesco-cassese/spotted-frontend).
+Per vedere il sito pubblico avvia anche il [frontend React](https://github.com/francesco-cassese/uncovered-frontend).
 
 ## API REST
 

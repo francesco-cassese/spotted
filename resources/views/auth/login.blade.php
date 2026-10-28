@@ -7,7 +7,7 @@
                     <div class="auth-card-header fs-4">{{ __('Bentornato') }}</div>
 
                     <div class="auth-card-subtitle fs-6">
-                        <p>Accedi al backoffice editoriale di Spotted</p>
+                        <p>Accedi al backoffice editoriale di Uncovered</p>
                     </div>
 
                     <div class="auth-card-body">
